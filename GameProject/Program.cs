@@ -11,13 +11,13 @@ namespace GameProject
             gamer1.TcNO = "22222222222";
             gamer1.Name = "Yunus";
             gamer1.LastName = "Kaydan";
-            gamer1.Birthday = "22/11/2001";
+            gamer1.Birthday = new DateTime(2001, 11, 22);
 
             Gamer gamer2 = new Gamer();
             gamer2.TcNO = "33333333333";
             gamer2.Name = "Berkay";
             gamer2.LastName = "Guldegirmenci";
-            gamer2.Birthday = "03/12/2001";
+            gamer2.Birthday = new DateTime(2002, 1, 1);
             ////////////////////////////////
             ///Game
             Game game1 = new Game();
@@ -126,6 +126,7 @@ namespace GameProject
 
                     }
                 }
+
 
 
 

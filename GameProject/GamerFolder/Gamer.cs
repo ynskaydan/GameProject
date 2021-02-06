@@ -9,7 +9,7 @@ namespace GameProject
         public string TcNO { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
-        public string Birthday { get; set; }
+        public DateTime Birthday { get; set; }
         public List<Game> gamespl { get; set; }
     }
 }

@@ -21,8 +21,9 @@ namespace GameProject
             register.Name = Console.ReadLine();
             Console.WriteLine("Please write your LastName: ");
             register.LastName = Console.ReadLine();
-            Console.WriteLine("Please write your Birthday: DD/MM/YYYY ");
-            register.Birthday = Console.ReadLine();
+            Console.WriteLine("Please write your Year of Birth:  ");
+            string birthday = Console.ReadLine();
+            register.Birthday = new DateTime(birthday);
             Console.WriteLine("Congrulations! " + register.Name + " succesfully registered!");
             gamers.Add(register);
 
@@ -46,31 +47,33 @@ namespace GameProject
                         string zi = Console.ReadLine();
                         if (zi == gamers[i].TcNO)
                         {
-                            Console.WriteLine("Please write your birthday: ");
+                            Console.WriteLine("Please write your year of birth: ");
                             string ti = Console.ReadLine();
-                            if (ti == gamers[i].Birthday)
+                            if (ti == gamers[i].Birthday.Year)
                             {
                                 Console.WriteLine("Congrulations! You have succesfully loggined!");
                             }
                             else
                             {
-                                Console.WriteLine("You couldn't loggin");
+                                throw new Exception("Not a valid value");
                             }
                         }
                         else
                         {
-                            Console.WriteLine("You couldn't loggin");
+                            throw new Exception("Not a valid value");
                         }
                     }
                     else
                     {
-                        Console.WriteLine("You couldn't loggin");
+
+                        throw new Exception("Not a valid value");
                     }
                 }
                 else
                 {
-                    Console.WriteLine("You couldn't loggin");
+                    throw new Exception("Not a valid value");
                 }
+               
             }
         }
         public void RemoveGamer(List<Gamer> gamers)
