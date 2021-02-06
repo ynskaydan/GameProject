@@ -17,12 +17,14 @@ namespace GameProject
             //{
 
             //            }
+            long birthday;
             Console.WriteLine("Please write your Name: ");
             register.Name = Console.ReadLine();
             Console.WriteLine("Please write your LastName: ");
             register.LastName = Console.ReadLine();
             Console.WriteLine("Please write your Year of Birth:  ");
-            string birthday = Console.ReadLine();
+            string b1 = Console.ReadLine();
+            birthday = Convert.ToInt64(b1);
             register.Birthday = new DateTime(birthday);
             Console.WriteLine("Congrulations! " + register.Name + " succesfully registered!");
             gamers.Add(register);
@@ -48,8 +50,10 @@ namespace GameProject
                         if (zi == gamers[i].TcNO)
                         {
                             Console.WriteLine("Please write your year of birth: ");
+                            long yearofbirth;
                             string ti = Console.ReadLine();
-                            if (ti == gamers[i].Birthday.Year)
+                            yearofbirth = Convert.ToInt64(ti);
+                            if (yearofbirth == gamers[i].Birthday.Year)
                             {
                                 Console.WriteLine("Congrulations! You have succesfully loggined!");
                             }
@@ -95,15 +99,16 @@ namespace GameProject
                         if (ri3 == gamers[i].TcNO)
                         {
                             Console.WriteLine("We almost match your all informations and ready for delete");
-                            Console.WriteLine("Please write your birthday for correction: DD/MM/YYYY");
+                            Console.WriteLine("Please write your birthday for correction: ");
+                            long rie4;
                             string ri4 = Console.ReadLine();
-                            if (ri4 == gamers[i].Birthday)
+                            rie4 = Convert.ToInt64(ri4);
+
+                            if (rie4 == gamers[i].Birthday.Year)
                             {
                                 Console.WriteLine("Dear," + gamers[i].Name + " we are unhappy for leaving us. We want to see you in the future.");
                                 gamers.Remove(gamers[i]);
                                
-
-
                             }
                             else
                             {

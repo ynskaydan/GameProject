@@ -63,7 +63,6 @@ namespace GameProject
             {
                 gamerManager.LogIn(gamers);
                 gamerManager.ListG(gamers);
-
             }
             else if (pn == "3")
             {
@@ -72,7 +71,7 @@ namespace GameProject
             }
             else
             {
-                Console.WriteLine("Please write a valid value");
+                throw new Exception("Please write a valid process number");
             }
 
             Console.WriteLine("Our Games is listed below: ");
